@@ -1,15 +1,10 @@
 from flask import Flask
-from flask import Flask, render_template
-import numpy as np
-import pandas as pd
-import pickle
 
 app = Flask(__name__)
 
-@app.route("/")
-def start():
-    return "The MBSA Server is Running"
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
 
-@app.route("/mbsa")
-def mbsa():
-    return render_template('index.html')
+if __name__ == '__main__':
+    app.run()
